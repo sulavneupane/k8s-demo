@@ -1,7 +1,5 @@
 # Kubernetes (k8s) Demo
 
-* Reference Video: https://www.youtube.com/watch?v=s_o8dwzRlu4
-
 ## What is Kubernetes?
 * Open source container orchestration tool
 * Developed by Google
@@ -187,3 +185,5 @@ spec:
 * Example: kubectl logs webapp-deployment-dcffd6bcc-gsmlt
 
 ### Note: Demo project is attached with the repository.
+
+* Reference Video: https://www.youtube.com/watch?v=s_o8dwzRlu4
