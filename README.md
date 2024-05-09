@@ -186,4 +186,5 @@ spec:
 
 ### Note: Demo project is attached with the repository.
 
-* Reference Video: https://www.youtube.com/watch?v=s_o8dwzRlu4
+## References
+* Video: https://www.youtube.com/watch?v=s_o8dwzRlu4
