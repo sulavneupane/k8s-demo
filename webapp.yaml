@@ -4,7 +4,7 @@ metadata:
   name: webapp-deployment
   labels:
     app: webapp
-spec:
+spec: # spec for deployment
   replicas: 1
   selector:
     matchLabels:
@@ -13,7 +13,7 @@ spec:
     metadata:
       labels:
         app: webapp
-    spec:
+    spec: # spec for pods
       containers:
         - name: webapp
           image: nanajanashia/k8s-demo-app:v1.0
@@ -41,7 +41,7 @@ kind: Service
 metadata:
   name: webapp-service
 spec:
-  type: NodePort # By default it is ClusterIP
+  type: NodePort # By default, it is ClusterIP
   selector:
     app: webapp
   ports:

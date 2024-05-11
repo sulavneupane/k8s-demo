@@ -4,7 +4,7 @@ metadata:
   name: mongo-deployment
   labels:
     app: mongo
-spec:
+spec: # spec for deployment
   replicas: 1
   selector:
     matchLabels:
@@ -13,10 +13,10 @@ spec:
     metadata:
       labels:
         app: mongo
-    spec:
+    spec: # spec for pods
       containers:
-      - name: mongodb
-        image: mongo:5.0
+      - name: mongo
+        image: mongo
         ports:
         - containerPort: 27017
         env:
@@ -31,10 +31,12 @@ spec:
               name: mongo-secret
               key: mongo-password
 ---
+# 3 dashes is the syntax for documents separation in YAML.
+# We can include both Deployment & Service in 1 file, because they belong together.
 apiVersion: v1
 kind: Service
 metadata:
-  name: mongo-service
+  name: mongo
 spec:
   selector:
     app: mongo
